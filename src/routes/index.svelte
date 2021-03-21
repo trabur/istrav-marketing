@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+	import * as animateScroll from "svelte-scrollto"
 
 	onMount(() => {
 		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
@@ -10,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>The platform for web services - ISTRAV</title>
+	<title>ISTRAV: Web solutions and custom software.</title>
 </svelte:head>
 
 <div class="masonry">
@@ -20,7 +21,12 @@
 				<span style="font-size: 3em; margin: 0 -0.1em;">IS</span>
 				<span style="vertical-align: top; font-size: 1.5em; line-height: 2.3em;">TRAV</span>
 			</div>
-			<h1 class="slogan">The platform for<br />web services.</h1>
+			<h1 class="slogan">Web solutions<br />and custom software.</h1>
+			<div class="expand">
+				<a href="/#" class="btn-floating btn-large waves-effect waves-light" on:click={() => animateScroll.scrollTo({element: '#platform'})}>
+					<i class="material-icons">expand_more</i>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -77,5 +83,9 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
+	}
+
+	.expand {
+		text-align: center;
 	}
 </style>
