@@ -10,7 +10,10 @@
 	<h1 class="title">Our products and services:</h1>
   <br />
 	<div class="row">
-		<div class="col s12 m6">
+		<div class="col s0 m1"></div>
+		<div class="col s12 m5">
+			<hr>
+			<br />
 			<a href="https://metaheap.io"><h1 class="logo">METAHEAP.IO</h1></a>
 			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
 			<br />
@@ -29,7 +32,9 @@
 			<div class="desc">This server hosts many eCommerce storefronts built for customers to go shopping online.</div>
 			<br />
 		</div>
-		<div class="col s12 m6">
+		<div class="col s12 m5">
+			<hr>
+			<br />
 			<a href="https://farmerless.com"><h1 class="logo">FARMERLESS.COM</h1></a>
 			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
 			<br />
@@ -48,13 +53,28 @@
 			<div class="desc">This server hosts many website blogs built for authors and readers.</div>
 			<br />
 		</div>
+		<div class="col s0 m1"></div>
+	</div>
+	<div class="row">
+		<div class="col s0 m3"></div>
+		<div class="col s12 m6">
+			<hr>
+			<br />
+
+			<a href="https://istrav.com"><h1 class="logo">CUSTOM SOFTWARE</h1></a>
+			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
+			<br />
+			<div class="desc">Are the above web solutions not the right fit for you? Let's talk. We can work together to best suit your needs by making a tweak or going 100% full custom.</div>
+			<br />
+			<a href="https://docs.istrav.com" target="_blank" class="waves-effect btn">docs.istrav.com</a>
+		</div>
+		<div class="col s0 m3"></div>
 	</div>
 
 	<br class="hide-on-med-and-down" />
   <br class="hide-on-med-and-down" />
   <br />
 </div>
-
 
 <style>
 	hr {
