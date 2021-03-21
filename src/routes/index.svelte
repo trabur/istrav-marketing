@@ -2,6 +2,8 @@
   import { onMount } from "svelte";
 	import * as animateScroll from "svelte-scrollto"
 
+	import Solutions from '../components/Solutions.svelte'
+
 	onMount(() => {
 		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 		particlesJS.load('particles-js', './particles.json', function() {
@@ -30,15 +32,14 @@
 		</div>
 	</div>
 </div>
-<div class="masonry">
-	<div id="platform">
-		
-	</div>
+<div id="platform">
+	<Solutions />
 </div>
+
 
 <style>
 	.masonry {
-		height: 100vh;
+		min-height: 100vh;
 		position: relative;
 	}
 
@@ -67,12 +68,6 @@
 
 	#platform {
 		background-color: #111;
-		overflow: hidden;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
 	}
 
 	#particles-js {
