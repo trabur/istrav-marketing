@@ -19,7 +19,7 @@
 			<br />
 			<div class="desc">This web application is an admin control panel for creating and managing eCommerce storefronts and website blogs built for website owners.</div>
 			<br />
-			<a href="https://admin.istrav.com" target="_blank" class="waves-effect btn">admin.istrav.com</a>
+			<a href="https://admin.istrav.com" target="_blank" class="waves-effect btn red lighten-2">admin.istrav.com</a>
 			
 			<br />
 			<br />
@@ -40,7 +40,7 @@
 			<br />
 			<div class="desc">This detached application is a backend built for web programmers that enables them to go headless.</div>
 			<br />
-			<a href="https://headless.istrav.com" target="_blank" class="waves-effect btn">headless.istrav.com</a>
+			<a href="https://headless.istrav.com" target="_blank" class="waves-effect btn red lighten-2">headless.istrav.com</a>
 
 			<br />
 			<br />
@@ -66,7 +66,7 @@
 			<br />
 			<div class="desc">Are the above web solutions not the right fit for you? Let's talk. We can work together to best suit your needs by making a tweak or going 100% full custom.</div>
 			<br />
-			<a href="https://docs.istrav.com" target="_blank" class="waves-effect btn">docs.istrav.com</a>
+			<a href="https://docs.istrav.com" target="_blank" class="waves-effect btn red lighten-2">docs.istrav.com</a>
 		</div>
 		<div class="col s0 m3"></div>
 	</div>

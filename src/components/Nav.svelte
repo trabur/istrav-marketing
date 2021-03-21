@@ -1,60 +1,35 @@
 <script>
-	export let segment;
 </script>
 
+<div class="nav">
+	<a href="/" class="btn-large waves-effect waves-light">
+		Home
+	</a>
+	
+	<a href="https://shop.istrav.com" class="btn-large waves-effect waves-light">
+		Shop
+	</a>
+	
+	<a href="/pricing" class="btn-large waves-effect waves-light">
+		Pricing
+	</a>
+
+	<a href="https://blog.istrav.com" class="btn-large waves-effect waves-light">
+		Blog
+	</a>
+
+	<a href="/faq" class="btn-large waves-effect waves-light">
+		FAQ
+	</a>
+
+	<a href="/contact" class="btn-large waves-effect waves-light">
+		Contact
+	</a>
+</div>
+
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
+	.nav {
+		padding: 1em;
+		text-align: center;
 	}
 </style>
-
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-	</ul>
-</nav>

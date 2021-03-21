@@ -3,6 +3,7 @@
 	import * as animateScroll from "svelte-scrollto"
 
 	import Solutions from '../components/Solutions.svelte'
+	import Nav from '../components/Nav.svelte'
 
 	onMount(() => {
 		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
@@ -31,6 +32,9 @@
 			</div>
 		</div>
 	</div>
+</div>
+<div id="navigation">
+	<Nav />
 </div>
 <div id="platform">
 	<Solutions />
@@ -69,8 +73,12 @@
     font-size: 2.5em;
 	}
 
+	#navigation {
+		background-color: #222;
+	}
+
 	#platform {
-		background-color: #111;
+		background-color: #333;
 	}
 
 	#particles-js {
