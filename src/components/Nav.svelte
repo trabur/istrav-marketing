@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <div class="nav">
 	<a href="/" class="btn-large waves-effect waves-light">
 		Home
@@ -31,5 +28,10 @@
 	.nav {
 		padding: 1em;
 		text-align: center;
+		background-color: #222;
+	}
+
+	.nav a {
+		margin: 0.5em;
 	}
 </style>

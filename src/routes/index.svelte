@@ -33,9 +33,7 @@
 		</div>
 	</div>
 </div>
-<div id="navigation">
-	<Nav />
-</div>
+<Nav />
 <div id="platform">
 	<Solutions />
 </div>
@@ -64,6 +62,7 @@
 		font-weight: 800;
 		text-align: center;
 		font-style: italic;
+		color: #333;
 	}
 
 	.slogan {
@@ -71,10 +70,7 @@
 		text-align: center;
 		margin-top: -1em;
     font-size: 2.5em;
-	}
-
-	#navigation {
-		background-color: #222;
+		color: #333;
 	}
 
 	#platform {
