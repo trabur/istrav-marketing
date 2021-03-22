@@ -17,9 +17,9 @@
 			<a href="https://metaheap.io"><h1 class="logo">METAHEAP.IO</h1></a>
 			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
 			<br />
-			<div class="desc">This web application is an admin control panel for creating and managing eCommerce storefronts and website blogs built for website owners.</div>
+			<div class="desc">This web application is an admin control panel for creating and managing our eCommerce solutions (storefronts, blogs, fulfillment, and promo) built for website owners.</div>
 			<br />
-			<a href="https://admin.istrav.com" target="_blank" class="waves-effect btn red lighten-2">admin.istrav.com</a>
+			<a href="https://admin.istrav.com" class="waves-effect btn red lighten-2">admin.istrav.com</a>
 			
 			<br />
 			<br />
@@ -31,6 +31,20 @@
 			<br />
 			<div class="desc">This server hosts many eCommerce storefronts built for customers to go shopping online.</div>
 			<br />
+			<a href="https://storefront.istrav.com" class="waves-effect btn red lighten-2">storefront.istrav.com</a>
+
+			<br />
+			<br />
+			<hr>
+			<br />
+
+			<a href="https://aaghc.com"><h1 class="logo">AAGHC.COM</h1></a>
+			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
+			<br />
+			<div class="desc">This server hosts many fulfillment (kitting and assembly) websites built for storefront owners.</div>
+			<br />
+			<a href="https://fulfillment.istrav.com" class="waves-effect btn red lighten-2">fulfillment.istrav.com</a>
+
 		</div>
 		<div class="col s12 m5">
 			<hr>
@@ -40,7 +54,7 @@
 			<br />
 			<div class="desc">This detached application is a backend built for web programmers that enables them to go headless.</div>
 			<br />
-			<a href="https://headless.istrav.com" target="_blank" class="waves-effect btn red lighten-2">headless.istrav.com</a>
+			<a href="https://headless.istrav.com" class="waves-effect btn red lighten-2">headless.istrav.com</a>
 
 			<br />
 			<br />
@@ -52,6 +66,19 @@
 			<br />
 			<div class="desc">This server hosts many website blogs built for authors and readers.</div>
 			<br />
+			<a href="https://blog.istrav.com" class="waves-effect btn red lighten-2">blog.istrav.com</a>
+			
+			<br />
+			<br />
+			<hr>
+			<br />
+
+			<a href="https://printedbasics.com"><h1 class="logo">PRINTEDBASICS.COM</h1></a>
+			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
+			<br />
+			<div class="desc">This server hosts many promotional product websites built for customers that want to brand their products.</div>
+			<br />
+			<a href="https://promo.istrav.com" class="waves-effect btn red lighten-2">promo.istrav.com</a>
 		</div>
 		<div class="col s0 m1"></div>
 	</div>
@@ -66,7 +93,7 @@
 			<br />
 			<div class="desc">Are the above web solutions not the right fit for you? Let's talk. We can work together to best suit your needs by making a tweak or going 100% full custom.</div>
 			<br />
-			<a href="https://docs.istrav.com" target="_blank" class="waves-effect btn red lighten-2">docs.istrav.com</a>
+			<a href="https://docs.istrav.com" class="waves-effect btn red lighten-2">docs.istrav.com</a>
 		</div>
 		<div class="col s0 m3"></div>
 	</div>
