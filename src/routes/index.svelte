@@ -67,7 +67,7 @@
 </script>
 
 <svelte:head>
-	{#if rawApp.name}
+	{#if rawApp && rawApp.name}
 		<title>{rawApp.name}: {rawApp.sloganLine1} {rawApp.sloganLine2}</title>
 	{/if}
 </svelte:head>
@@ -93,17 +93,21 @@
 					<span style="font-size: 1.5em; line-height: 2em;">{rawApp.name || ''}</span>
 				</div>
 			{/if}
-			<h1 class="slogan">{rawApp.sloganLine1 || ''}<br />{rawApp.sloganLine2 || ''}</h1>
+			{#if rawApp}
+				<h1 class="slogan">{rawApp.sloganLine1 || ''}<br />{rawApp.sloganLine2 || ''}</h1>
+			{/if}
 			<div class="expand">
-				<a href="/#" class="btn-floating btn-large waves-effect waves-light" on:click={() => animateScroll.scrollTo({element: '#platform'})}>
+				<a href="/#" class="btn-floating btn-large waves-effect waves-light" on:click={() => animateScroll.scrollTo({element: '#jump-here'})}>
 					<i class="material-icons">expand_more</i>
 				</a>
 			</div>
 		</div>
 	</div>
 </div>
+
+<div id="jump-here"></div>
 <Nav />
-<div id="platform">
+<div class="platform">
 	{#if domainId === 'istrav.com'}
 		<Solutions />
 	{/if}
@@ -111,7 +115,6 @@
 <div class="dotted">
 	<div style="min-height: 100vh;"></div>
 </div>
-
 
 <style>
 	.masonry {
@@ -143,7 +146,7 @@
 		color: #333;
 	}
 
-	#platform {
+	.platform {
 		background-color: #333;
 	}
 
