@@ -28,8 +28,8 @@
       domainId = 'istrav.com'
     }
     // set appId from domain 
-    if (domainId.includes('dimension.click')) {
-      // for subdomains such as http://istrav.dimension.click
+    if (domainId.includes('tyu67.com')) {
+      // for subdomains such as http://istrav.tyu67.com
       let endpoint = domainId.split('.')[0]
       let esEndpoint = await scripts.tenant.apps.getEndpoint(null, endpoint)
       if (esEndpoint.payload.success === true) {
