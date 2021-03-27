@@ -42,9 +42,9 @@
 			<a href="https://aaghc.com"><h1 class="logo">AAGHC.COM</h1></a>
 			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
 			<br />
-			<div class="desc">This server hosts many fulfillment (kitting and assembly) websites built for storefront owners.</div>
+			<div class="desc">This server hosts many forums (message bulletin boards) websites built for communities.</div>
 			<br />
-			<a href="https://fulfillment.istrav.com" class="waves-effect btn red lighten-2">fulfillment.istrav.com</a>
+			<a href="https://forum.istrav.com" class="waves-effect btn red lighten-2">forum.istrav.com</a>
 
 			<br />
 			<br />
