@@ -106,7 +106,7 @@
 </div>
 
 <div id="jump-here"></div>
-<Nav />
+<Nav selected='marketing' appId={appId} />
 <div class="platform">
 	{#if domainId === 'istrav.com'}
 		<Solutions />
