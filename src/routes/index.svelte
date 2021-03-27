@@ -54,6 +54,7 @@
         alert(esOne.payload.reason)
       }
     }
+		console.log('esApp', esApp)
 	})
 
 	// AAGHC
@@ -105,16 +106,18 @@
 	</div>
 </div>
 
-<div id="jump-here"></div>
-<Nav selected='marketing' appId={appId} />
-<div class="platform">
-	{#if domainId === 'istrav.com'}
-		<Solutions />
-	{/if}
-</div>
-<div class="dotted">
-	<div style="min-height: 100vh;"></div>
-</div>
+{#if appId}
+	<div id="jump-here"></div>
+	<Nav selected='marketing' appId={appId} />
+	<div class="platform">
+		{#if domainId === 'istrav.com'}
+			<Solutions />
+		{/if}
+	</div>
+	<div class="dotted">
+		<div style="min-height: 100vh;"></div>
+	</div>
+{/if}
 
 <style>
 	.masonry {

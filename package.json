@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "istrav-marketing",
+  "description": "website load balancer to put infront of your website's apps.",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
