@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/contact", "destination": "/" },
+    { "source": "/faq", "destination": "/" },
+    { "source": "/pages/:id", "destination": "/" }
+  ]
+}
