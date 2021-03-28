@@ -64,7 +64,7 @@
 			:)
 		</div>
 	</div>
-	<Footer appId={appId} esApp={esApp} rawApp={rawApp} />
+	<Footer appId={appId} esApp={esApp} rawApp={rawApp} domainId={domainId} />
 {/if}
 
 <style>

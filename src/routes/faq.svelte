@@ -64,7 +64,7 @@
 			Checkout these frequently asked questions to learn more about our work and capabilities.
 		</div>
 	</div>
-	<Footer appId={appId} esApp={esApp} rawApp={rawApp} />
+	<Footer appId={appId} esApp={esApp} rawApp={rawApp} domainId={domainId} />
 {/if}
 
 <style>

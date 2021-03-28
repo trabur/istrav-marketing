@@ -7,6 +7,7 @@
   export let esApp
   export let rawApp
   export let appId
+  export let domainId
   
   let propertyId = esApp.tawkToPropertyId // || '6051205af7ce18270930caec'
   let chatId = esApp.tawkToChatId // || '1f0ueco46'
@@ -53,7 +54,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-      Copyright @{new Date().getFullYear()} <a href="https://metaheap.io">{`METAHEAP.IO`}</a>. All Rights Reserved. Powered by <a href="https://istrav.com" target="_blank">ISTRAV</a>.
+      Copyright @{new Date().getFullYear()} <a href={`https://${domainId}`}>{domainId}</a>. All Rights Reserved. Powered by <a href="https://istrav.com" target="_blank">ISTRAV</a>.
     </div>
   </div>
 </footer>

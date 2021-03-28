@@ -118,7 +118,7 @@
 	<div class="dotted">
 		<div style="min-height: 100vh;"></div>
 	</div>
-	<Footer appId={appId} esApp={esApp} rawApp={rawApp} />
+	<Footer appId={appId} esApp={esApp} rawApp={rawApp} domainId={domainId} />
 {/if}
 
 <style>
