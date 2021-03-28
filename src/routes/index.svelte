@@ -4,6 +4,7 @@
 
 	import Solutions from '../components/Solutions.svelte'
 	import Nav from '../components/Nav.svelte'
+	import Footer from '../components/Footer/Main.svelte'
 
   let esApp
   let appId
@@ -117,6 +118,7 @@
 	<div class="dotted">
 		<div style="min-height: 100vh;"></div>
 	</div>
+	<Footer appId={appId} esApp={esApp} rawApp={rawApp} />
 {/if}
 
 <style>
