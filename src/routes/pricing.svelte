@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
 	import Nav from '../components/Nav.svelte'
 	import Footer from '../components/Footer/Main.svelte'
+	import Logo from '../components/Logo.svelte'
 
   let esApp
   let appId
@@ -58,6 +59,7 @@
 </svelte:head>
 
 {#if appId}
+	<Logo domainId={domainId} rawApp={rawApp} />
 	<Nav selected='marketing.pricing' appId={appId} />
 	<div class="dotted">
 		<div style="min-height: 100vh;">
