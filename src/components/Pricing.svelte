@@ -27,7 +27,7 @@
       <div class="col s0 m1"></div>
       <div class="col s12 m10">
         <h1 class="title">Plans & Pricing:</h1>
-        <p class="description">Many organizations big and small use ISTRAV to power their website. From fully-managed to self-service, plus pricing that scales as you grow, our solutions provide the perfect fit:</p>
+        <p class="description">Many organizations large and small use ISTRAV to power their website. From fully-managed to self-service, plus pricing that scales as you grow, our solutions provide the perfect fit:</p>
         <div class="card" style="padding: 1em;">
           {#if plans.length > 0}
             <div class="row">
