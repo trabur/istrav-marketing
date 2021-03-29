@@ -102,7 +102,7 @@
         </div>
         <div class="fine-print">
           <h5>FREE hosting available for communities with open source projects...</h5>
-          <p>If you run an open source project, and you are interested in a free hosting with ISTRAV, please contact us.</p>
+          <p>If you run an open source project, and you are interested in free hosting with ISTRAV, please contact us.</p>
         </div>
       </div>
       <div class="col s0 m1"></div>
