@@ -17,7 +17,6 @@
   })
 </script>
 
-
 <div class="dotted">
   <div style="min-height: 100vh;">
     <br class="hide-on-med-and-down" />
@@ -28,7 +27,14 @@
       <div class="col s12 m10">
         <h1 class="title">Plans & Pricing:</h1>
         <p class="description">Many organizations large and small use ISTRAV to power their website. From fully-managed to self-service, plus pricing that scales as you grow, our solutions provide the perfect fit:</p>
-        <div class="card" style="padding: 1em;">
+        <div class="card" style="padding: 1em; color: #333;">
+          <div class="row">
+            <div class="col s12 m6">
+              <h4 style="font-weight: 600;"><i class="material-icons">brush</i> Instant Hosting</h4>
+              <h5 style="font-size: 1.2em; margin-left: 1.5em;">The fastest way to get your web solutions up and running today. Launch a full featured website in just a few clicks; leave the server maintenance and upgrades to us.</h5>
+            </div>
+            <div class="col s0 m6"></div>
+          </div>
           {#if plans.length > 0}
             <div class="row">
               {#each plans as plan}
@@ -65,9 +71,9 @@
           <div class="discount">
             <div class="row" style="margin: 0;">
               <div class="col s0 m1"></div>
-              <div class="col s12 m6" style="">
+              <div class="col s12 m6">
                 <h5>Non-profit or start-up company?</h5>
-                <h6>Please contact us for discounted pricing.</h6>
+                <h6>Feel free to reach out to us for discounted pricing.</h6>
               </div>
               <div class="col s12 m4" style="text-align: center;">
                 <a href={`/contact`} class="btn-large waves-effect waves-light red lighten-2">
@@ -93,6 +99,10 @@
             </div>
             <br class="hide-on-med-and-down" />
           </div>
+        </div>
+        <div class="fine-print">
+          <h5>FREE hosting available for communities with open source projects...</h5>
+          <p>If you run an open source project, and you are interested in a free hosting with ISTRAV, please contact us.</p>
         </div>
       </div>
       <div class="col s0 m1"></div>
@@ -121,7 +131,7 @@
 
   .name {
     font-size: 1.5em;
-    font-weight: 800;
+    font-weight: 400;
     color: #222;
     text-align: center;
     text-transform: uppercase;
@@ -185,6 +195,20 @@
   }
   .footer .includes i {
     font-size: 4em;
+  }
+
+  .fine-print h5 {
+    font-weight: 600;
+    color: #333;
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+  }
+  .fine-print p {
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+    color: #111;
   }
 </style>
 
