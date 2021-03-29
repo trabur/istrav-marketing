@@ -7,7 +7,7 @@
   <br class="hide-on-med-and-down" />
   <br />
 
-	<h1 class="title">Our products and services:</h1>
+	<h1 class="title">Products & Services:</h1>
   <br />
 	<div class="row">
 		<div class="col s0 m1"></div>

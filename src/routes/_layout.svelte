@@ -41,6 +41,8 @@ onMount(() => {
     istrav.account.users.init({ host: 'https://api.istrav.com' })
     istrav.account.carts.init({ host: 'https://api.istrav.com' })
     istrav.account.orders.init({ host: 'https://api.istrav.com' })
+    istrav.subscription.plans.init({ host: 'https://api.istrav.com' })
+    istrav.subscription.licenses.init({ host: 'https://api.istrav.com' })
     loading = false
   };
   code.src = 'https://headless.istrav.com/scripts/index.js';
