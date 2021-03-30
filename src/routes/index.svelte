@@ -6,7 +6,7 @@
 	import Nav from '../components/Nav.svelte'
 	import Footer from '../components/Footer/Main.svelte'
 	import Pricing from '../components/Pricing.svelte'
-	import Announcements from '../components/Annoucements.svelte'
+	import GetStarted from '../components/GetStarted.svelte'
 
   let esApp
   let appId
@@ -112,7 +112,7 @@
 {#if appId}
 	<div id="jump-here"></div>
 	<Nav selected='marketing' appId={appId} />
-	<Announcements />
+	<GetStarted />
 	{#if domainId === 'istrav.com'}
 		<Solutions />
 	{/if}
