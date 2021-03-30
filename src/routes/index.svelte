@@ -6,6 +6,7 @@
 	import Nav from '../components/Nav.svelte'
 	import Footer from '../components/Footer/Main.svelte'
 	import Pricing from '../components/Pricing.svelte'
+	import Announcements from '../components/Annoucements.svelte'
 
   let esApp
   let appId
@@ -111,11 +112,10 @@
 {#if appId}
 	<div id="jump-here"></div>
 	<Nav selected='marketing' appId={appId} />
-	<div class="platform">
-		{#if domainId === 'istrav.com'}
-			<Solutions />
-		{/if}
-	</div>
+	<Announcements />
+	{#if domainId === 'istrav.com'}
+		<Solutions />
+	{/if}
 	<Pricing appId={appId} />
 	<Footer appId={appId} esApp={esApp} rawApp={rawApp} domainId={domainId} />
 {/if}
@@ -148,10 +148,6 @@
 		margin-top: -1em;
     font-size: 2.5em;
 		color: #333;
-	}
-
-	.platform {
-		background-color: #333;
 	}
 
 	#particles-js {

@@ -38,7 +38,7 @@
   .nav {
     padding: 1em;
     text-align: center;
-    background-color: #222;
+    background-color: #111;
   }
 
   .nav a {

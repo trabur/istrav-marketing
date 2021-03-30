@@ -2,7 +2,7 @@
 </script>
 
 
-<div class="middle">
+<div class="platform">
 	<br class="hide-on-med-and-down" />
   <br class="hide-on-med-and-down" />
   <br />
@@ -149,11 +149,6 @@
     margin: 0;
   }
 
-  .middle {
-		color: #aaa;
-    padding: 1em;
-  }
-
   .power a {
     text-decoration: underline;
   }
@@ -161,6 +156,12 @@
   .desc {
     font-size: 1.3em;
   }
+
+	.platform {
+		color: #aaa;
+    padding: 1em;
+		background-color: #333;
+	}
 
 </style>
 
