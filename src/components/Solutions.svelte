@@ -63,7 +63,7 @@
 			<br />
 			<div class="desc">This server hosts many intro or homepage websites built for website owners and viewers.</div>
 			<br />
-			<a href="https://marketing.istrav.com" class="waves-effect btn red lighten-2">marketing.istrav.com</a>
+			<a href="https://www.istrav.com" class="waves-effect btn red lighten-2">www.istrav.com</a>
 
 			<br />
 			<br />
