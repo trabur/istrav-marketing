@@ -121,7 +121,7 @@
               <br />
               <div>You will need a server such as a DigitalOcean droplet or Heroku app. Also, be ready to spin up these 3rd party requirements: MongoDB, PostgreSQL, and RabbitMQ.</div>
               <br />
-              <div>If you know what you are doing, running your own solution is not so bad. However things can be challenging for new comers.</div>
+              <div>If you know what you are doing, hosting our software is not so bad. However things can be challenging for new comers.</div>
             </div>
           </div>
         </div>
