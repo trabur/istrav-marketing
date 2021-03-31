@@ -12,7 +12,7 @@
 	<div class="row" style="margin: 0;">
 		<div class="col s0 m1"></div>
 		<div class="col s12 m10">
-			<p class="description">One thing that makes us different from other web solution companies, such as odoo.com and invisioncommunity.com, is that we also brand our software. For instance, all of our "powered by" ISTRAV websites below are examples of what our white labeling technology is capable of achieving. So you bring your own domain name (like istrav.com or oldneckties.com) and we will rebrand our products & services around you to best suite your needs. If something doesn't quite fit in right, contact us, and ask about our custom software capabilities.</p>
+			<p class="description">One thing that makes us different from other web solution companies, such as odoo.com and invisioncommunity.com, is that we also brand our software. For instance, all of our "powered by ISTRAV" websites below are examples of what our white labeling technology is capable of achieving. So you bring your own domain name (like istrav.com or oldneckties.com) and we will rebrand our products & services around you to best suite your needs. If something doesn't quite fit in right, contact us, and ask about our custom software capabilities.</p>
 		</div>
 		<div class="col s0 m1"></div>
 	</div>
