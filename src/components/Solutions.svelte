@@ -25,7 +25,7 @@
 			<a href="https://metaheap.io"><h1 class="logo">METAHEAP.IO</h1></a>
 			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
 			<br />
-			<div class="desc">This web application is an admin control panel for creating and managing our eCommerce solutions (marketing, storefronts, blogs, fulfillment, and promo) built for website owners.</div>
+			<div class="desc">This web application is an admin control panel for creating and managing our web solutions (www, storefront, blog, forum, and promo) built for website owners.</div>
 			<br />
 			<a href="https://admin.istrav.com" class="waves-effect btn red lighten-2">admin.istrav.com</a>
 			
