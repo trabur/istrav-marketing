@@ -5,7 +5,7 @@
 		let splide = new Splide('.splide', {
 			type: 'loop',
 			fixedWidth: '20em',
-			autoplay: true
+			autoplay: false
 		})
 
 		splide.on('autoplay:playing', function (rate) {
