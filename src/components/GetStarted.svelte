@@ -26,7 +26,7 @@
 	<div class="row">
 		<div class="col s0 m1"></div>
 		<div class="col s12 m10">
-			<p class="description">Hello, and welcome to ISTRAV! Thank you for taking the time to consider us as your next web solutions and custom software partner. The following series of videos is our conversion funnel for launching websites into production at rocket speeds. Please give yourself a moment to watch them, browse our bog, and checkout our community. Got questions? Jump into the FAQ, shoot us an email, or take advantage of our live chat. When you succeed we succeed. So we hope you are excited just as much as we are; let's get started!</p>
+			<p class="description">Hello, and welcome to ISTRAV! Thank you for taking the time to consider us as your next web solutions and custom software teammate. The following series of videos is our conversion funnel for launching websites into production at rocket speeds. Please give yourself a moment to watch them, browse our bog, and checkout our community. Got questions? Jump into the FAQ, contact us by email, or take advantage of our live chat. When you succeed we succeed. So we hope you are excited just as much as we are; let's get started!</p>
 			<div class="splide">
 				<div class="splide__track">
 					<ul class="splide__list">
