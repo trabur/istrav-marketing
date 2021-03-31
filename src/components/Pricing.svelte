@@ -31,7 +31,7 @@
           <div class="row">
             <div class="col s12 m6">
               <h4 style="font-weight: 600;"><i class="material-icons">brush</i> Instant Hosting</h4>
-              <h5 style="font-size: 1.2em; margin-left: 1.5em;">The fastest way to get your web solutions up and running today. Launch a full featured website in just a few clicks; leave the server maintenance and upgrades to us.</h5>
+              <h5 style="font-size: 1.2em; margin-left: 1.6em;">The fastest way to get your web solutions up and running today. Launch a full featured website in just a few clicks; leave the server maintenance and upgrades to us.</h5>
             </div>
             <div class="col s0 m6"></div>
           </div>
@@ -53,11 +53,11 @@
                     </ul>
                     <div class="jump">
                       {#if plan.price}
-                        <a href={plan.purchaseUrl} class="btn-large waves-effect waves-light red lighten-2">
+                        <a href={plan.purchaseUrl} class="btn waves-effect waves-light red lighten-2">
                           Start now
                         </a>
                       {:else}
-                        <a href="/contact" class="btn-large waves-effect waves-light red lighten-2">
+                        <a href="/contact" class="btn waves-effect waves-light red lighten-2">
                           Contact Us
                         </a>
                       {/if}
@@ -103,6 +103,27 @@
         <div class="fine-print">
           <h5>FREE hosting available for communities with open source projects...</h5>
           <p>If you run an open source project, and you are interested in free hosting with ISTRAV, please contact us.</p>
+        </div>
+        <br />
+        <div class="card" style="background-color: #ccc; padding: 1em; color: #333;">
+          <div class="row" style="margin: 0;">
+            <div class="col s12 m6">
+              <h4 style="font-weight: 600;"><i class="material-icons">lock</i> Open Source</h4>
+              <div style="margin-left: 2.2em;">
+                <h5 style="font-size: 1.2em;">ISTRAV is open source software that is free for anyone to download and install on their own server under the terms of the GNU General Public Licence (GPLv3).</h5>
+                <a href="https://github.com/trabur" target="_blank" class="btn-small waves-effect waves-light red lighten-2">
+                  Go to GitHub repo →
+                </a>
+              </div>
+            </div>
+            <div class="col s0 m6">
+              <div>The code can be found in our GitHub repository/account named trabur. For installation instructions please refer to <a href="https://docs.istrav.com">docs.istrav.com</a>.</div>
+              <br />
+              <div>You will need a server such as a DigitalOcean droplet or Heroku app. Also, be ready to spin up these 3rd party requirements: MongoDB, PostgreSQL, and RabbitMQ.</div>
+              <br />
+              <div>If you know what you are doing, running your own solution is not so bad. However things can be challenging for new comers.</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col s0 m1"></div>
