@@ -9,7 +9,7 @@
     // get the menus
     let esPlans = await scripts.subscription.plans.getAll(appId)
     if (esPlans.payload.success === true) {
-      plans = esPlans.payload.data
+      plans = esPlans.payload.data.sort((a, b) => a.price-b.price)
     } else {
       console.log(esPlans.payload.reason)
     }
@@ -41,10 +41,12 @@
                 <div class="col s12 m4">
                   <div class="plan card" style="background-color: #eee;">
                     <h1 class="name">{plan.name}</h1>
-                    {#if plan.price}
-                      <div class="price">${plan.price} / mo</div>
-                    {:else}
+                    {#if plan.price === -1}
                       <div class="price">Custom</div>
+                    {:else if plan.price === 0}
+                      <div class="price">$0 / mo</div>
+                    {:else}
+                      <div class="price">${plan.price} / mo</div>
                     {/if}
                     <ul class="details">
                       {#each JSON.parse(plan.details) as detail}
