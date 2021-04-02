@@ -25,7 +25,7 @@
 			<a href="https://metaheap.io"><h1 class="logo">METAHEAP.IO</h1></a>
 			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
 			<br />
-			<div class="desc">This web application is an admin control panel for creating and managing our web solutions (www, shop, blog, forum, and promo) built for website owners.</div>
+			<div class="desc">This web application is an admin control panel for creating and managing our web solutions (www, shop, channel, forum, and promo) built for website owners.</div>
 			<br />
 			<a href="https://admin.istrav.com" class="waves-effect btn red lighten-2">admin.istrav.com</a>
 			
@@ -99,9 +99,9 @@
 			<a href="https://burnfort.com"><h1 class="logo">BURNFORT.COM</h1></a>
 			<div class="power">Powered by <a href="https://istrav.com">ISTRAV</a></div>
 			<br />
-			<div class="desc">This server hosts many website blogs built for authors and readers.</div>
+			<div class="desc">This server hosts many website channels built for creators and subscribers.</div>
 			<br />
-			<a href="https://blog.istrav.com" class="waves-effect btn red lighten-2">blog.istrav.com</a>
+			<a href="https://channel.istrav.com" class="waves-effect btn red lighten-2">channel.istrav.com</a>
 			
 			<br />
 			<br />
