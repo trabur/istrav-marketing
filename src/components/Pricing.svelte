@@ -54,13 +54,13 @@
                       {/each}
                     </ul>
                     <div class="jump">
-                      {#if plan.price}
-                        <a href={plan.purchaseUrl} class="btn waves-effect waves-light red lighten-2">
-                          Start now
-                        </a>
-                      {:else}
+                      {#if plan.price === -1}
                         <a href="/contact" class="btn waves-effect waves-light red lighten-2">
                           Contact Us
+                        </a>
+                      {:else}
+                        <a href={plan.purchaseUrl} class="btn waves-effect waves-light red lighten-2">
+                          Start now
                         </a>
                       {/if}
                     </div>
