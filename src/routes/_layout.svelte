@@ -20,7 +20,7 @@
     // appId domain state
     let backend
     let headless
-    if (window.location.host === 'localhost:5280') {
+    if (window.location.host === 'localhost:8000') {
       window.appDomain = 'istrav.com'
       backend = 'http://localhost:1337'
       headless = 'http://localhost:9999'
@@ -53,7 +53,7 @@
       istrav.subscription.licenses.init({ host: backend })
       loading = false
     };
-    
+
     code.src = `${headless}/scripts/index.js`;
     code.setAttribute('type', 'module')
     document.getElementById('code').appendChild(code); 
