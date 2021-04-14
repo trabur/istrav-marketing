@@ -2,6 +2,11 @@ TYU67.COM
 ========
 
 ```bash
+# development
+export PORT=8000; npm run dev
+```
+
+```bash
 npm install
 npm run build
 npm start
