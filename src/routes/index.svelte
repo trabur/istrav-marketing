@@ -112,7 +112,7 @@
 {#if appId}
 	<div id="jump-here"></div>
 	<Nav selected='marketing' appId={appId} />
-	<GetStarted />
+	<GetStarted appId={appId} uploads={uploads} domainId={domainId} />
 	{#if domainId === 'istrav.com'}
 		<Solutions />
 	{/if}

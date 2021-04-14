@@ -51,6 +51,8 @@
       istrav.account.orders.init({ host: backend })
       istrav.subscription.plans.init({ host: backend })
       istrav.subscription.licenses.init({ host: backend })
+      istrav.channel.videos.init({ host: backend })
+      istrav.channel.guides.init({ host: backend })
       loading = false
     };
 
