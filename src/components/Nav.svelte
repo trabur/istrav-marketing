@@ -4,6 +4,11 @@
 	export let selected
   export let appId
 
+	export let primaryBtnBackColor
+	export let primaryBtnTextColor
+	export let secondaryBtnBackColor
+	export let secondaryBtnTextColor
+
   let items = []
 
 	onMount(async () => {    
@@ -22,11 +27,11 @@
 	<div class="nav">
 		{#each items as nav}
 			{#if nav.id === selected}
-				<a href={nav.url} class="btn-large waves-effect waves-light red lighten-2">
+				<a href={nav.url} class={`btn-large waves-effect waves-light ${primaryBtnBackColor} ${primaryBtnTextColor}`}>
 					{nav.name}
 				</a>
 			{:else}
-				<a href={nav.url} class="btn-large waves-effect waves-light">
+				<a href={nav.url} class={`btn-large waves-effect waves-light ${secondaryBtnBackColor} ${secondaryBtnTextColor}`}>
 					{nav.name}
 				</a>
 			{/if}

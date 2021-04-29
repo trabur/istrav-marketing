@@ -69,10 +69,14 @@
 	.splide__slide .tumbnail .name {
 		position: absolute;
 		z-index: 10;
-    font-size: 1em;
-    padding: 1em;
-    color: #fff;
-    background: #000;
+		font-size: 1em;
+		padding: 1em;
+		color: #fff;
+		background: #000;
+	}
+
+	.splide__slide .tumbnail .name:hover {
+		text-decoration: underline;
 	}
 </style>
 

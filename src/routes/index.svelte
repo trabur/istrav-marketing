@@ -5,7 +5,7 @@
 	import Solutions from '../components/Solutions.svelte'
 	import Nav from '../components/Nav.svelte'
 	import Footer from '../components/Footer/Main.svelte'
-	import Pricing from '../components/Pricing.svelte'
+	import OpenSource from '../components/OpenSource.svelte'
 	import GetStarted from '../components/GetStarted.svelte'
 
   let esApp
@@ -17,6 +17,23 @@
     name: '',
     short: ''
   }
+
+	let coverBackColor
+	let coverTextColor
+	let primaryBtnBackColor
+	let primaryBtnTextColor
+	let secondaryBtnBackColor
+	let secondaryBtnTextColor
+
+	let marketing
+
+	let labelName
+	let labelShort
+	let labelEmail
+	let labelAbout
+	let labelSloganLine1
+	let labelSloganLine2
+	let labelPrimaryOffering
 
 	onMount(async () => {
 		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
@@ -41,6 +58,23 @@
         uploads = esEndpoint.payload.data.uploads
         rawApp = JSON.parse(esEndpoint.payload.data.raw)
         domainId = esEndpoint.payload.data.domain // do this so images load
+				
+				coverBackColor = esApp.coverBackColor
+				coverTextColor = esApp.coverTextColor
+				primaryBtnBackColor = esApp.primaryBtnBackColor
+				primaryBtnTextColor = esApp.primaryBtnTextColor
+				secondaryBtnBackColor = esApp.secondaryBtnBackColor
+				secondaryBtnTextColor = esApp.secondaryBtnTextColor
+
+				marketing = esApp.marketing
+
+				labelName = esApp.labelName
+				labelShort = esApp.labelShort
+				labelEmail = esApp.labelEmail
+				labelAbout = esApp.labelAbout
+				labelSloganLine1 = esApp.labelSloganLine1
+				labelSloganLine2 = esApp.labelSloganLine2
+				labelPrimaryOffering = esApp.labelPrimaryOffering
       } else {
         alert(esEndpoint.payload.reason)
       }
@@ -53,6 +87,23 @@
         appId = esOne.payload.data.id
         uploads = esOne.payload.data.uploads
         rawApp = JSON.parse(esOne.payload.data.raw)
+
+				coverBackColor = esApp.coverBackColor
+				coverTextColor = esApp.coverTextColor
+				primaryBtnBackColor = esApp.primaryBtnBackColor
+				primaryBtnTextColor = esApp.primaryBtnTextColor
+				secondaryBtnBackColor = esApp.secondaryBtnBackColor
+				secondaryBtnTextColor = esApp.secondaryBtnTextColor
+
+				marketing = esApp.marketing
+
+				labelName = esApp.labelName
+				labelShort = esApp.labelShort
+				labelEmail = esApp.labelEmail
+				labelAbout = esApp.labelAbout
+				labelSloganLine1 = esApp.labelSloganLine1
+				labelSloganLine2 = esApp.labelSloganLine2
+				labelPrimaryOffering = esApp.labelPrimaryOffering
       } else {
         alert(esOne.payload.reason)
       }
@@ -71,13 +122,13 @@
 </script>
 
 <svelte:head>
-	{#if rawApp && rawApp.name}
-		<title>{rawApp.name}: {rawApp.sloganLine1} {rawApp.sloganLine2}</title>
+	{#if labelName}
+		<title>{labelName}: {labelSloganLine1} {labelSloganLine2}</title>
 	{/if}
 </svelte:head>
 
 <div class="masonry">
-	<div id="particles-js">
+	<div id="particles-js" style={`background-color: ${coverBackColor}; color: ${coverTextColor}`}>
 		<div class="middle">
 			{#if domainId === 'istrav.com'}
 				<div class="logo">
@@ -94,14 +145,14 @@
 				</div>
 			{:else}
 				<div class="logo">
-					<span style="font-size: 1.5em; line-height: 2em;">{rawApp.name || ''}</span>
+					<span style="font-size: 1.5em; line-height: 2em;">{labelName || ''}</span>
 				</div>
 			{/if}
 			{#if rawApp}
-				<h1 class="slogan">{rawApp.sloganLine1 || ''}<br />{rawApp.sloganLine2 || ''}</h1>
+				<h1 class="slogan">{labelSloganLine1 || ''}<br />{labelSloganLine2 || ''}</h1>
 			{/if}
 			<div class="expand">
-				<a href="/#" class="btn-floating btn-large waves-effect waves-light" on:click={() => animateScroll.scrollTo({element: '#jump-here'})}>
+				<a href="/#" class={`btn-floating btn-large waves-effect waves-light ${secondaryBtnBackColor} ${secondaryBtnTextColor}`} on:click={() => animateScroll.scrollTo({element: '#jump-here'})}>
 					<i class="material-icons">expand_more</i>
 				</a>
 			</div>
@@ -111,13 +162,13 @@
 
 {#if appId}
 	<div id="jump-here"></div>
-	<Nav selected='marketing' appId={appId} />
-	<GetStarted appId={appId} uploads={uploads} domainId={domainId} />
+	<Nav selected='marketing' {appId} {primaryBtnBackColor} {primaryBtnTextColor} {secondaryBtnBackColor} {secondaryBtnTextColor} />
+	<GetStarted appId={appId} uploads={uploads} domainId={domainId} {marketing} />
 	{#if domainId === 'istrav.com'}
 		<Solutions />
+		<OpenSource appId={appId}  />
 	{/if}
-	<Pricing appId={appId} />
-	<Footer appId={appId} esApp={esApp} rawApp={rawApp} domainId={domainId} />
+	<Footer appId={appId} esApp={esApp} domainId={domainId} {coverBackColor} {coverTextColor} {labelName} {labelAbout} {labelPrimaryOffering} />
 {/if}
 
 <style>
@@ -139,7 +190,6 @@
 		font-size: 4em;
 		font-weight: 800;
 		text-align: center;
-		color: #333;
 	}
 
 	.slogan {
@@ -147,11 +197,11 @@
 		text-align: center;
 		margin-top: -1em;
     font-size: 2.5em;
-		color: #333;
 	}
 
 	#particles-js {
 		background-color: #ee6e73;
+		color: #333;
 		overflow: hidden;
 		position: absolute;
 		top: 0;
