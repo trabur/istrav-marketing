@@ -42,11 +42,11 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">{labelName || 'ISTRAV'}</h5>
+        <h5 class="white-text">{labelName || ''}</h5>
         <p class="grey-text text-lighten-4">{labelAbout || ''}</p>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">{labelPrimaryOffering || 'Web Solutions'}</h5>
+        <h5 class="white-text">{labelPrimaryOffering || ''}</h5>
         {#if items.length > 0}
           <ul>
             {#each items as nav}

@@ -11,38 +11,40 @@
 	let guide
 
 	onMount(async () => {
-    let esGuide = await scripts.channel.guides.getOne(appId, 'welcome')
-		console.log('esGuide', esGuide)
-    if (esGuide.payload.success === true) {
-      guide = esGuide.payload.data
-    } else {
-      alert(esGuide.payload.reason)
-    }
+		if (marketing) {
+			let esGuide = await scripts.channel.guides.getOne(appId, 'welcome')
+			console.log('esGuide', esGuide)
+			if (esGuide.payload.success === true) {
+				guide = esGuide.payload.data
+			} else {
+				alert(esGuide.payload.reason)
+			}
+		}
 	})
 </script>
 
 
-<div class="announce">
-	<br class="hide-on-med-and-down" />
-	<br class="hide-on-med-and-down" />
-	<br />
+{#if marketing}
+	<div class="announce">
+		<br class="hide-on-med-and-down" />
+		<br class="hide-on-med-and-down" />
+		<br />
 
-	<!-- <h1 class="title">Getting Started:</h1> -->
-	<div class="row">
-		<div class="col s0 m1"></div>
-		<div class="col s12 m10 description">
-			{#if marketing}
+		<!-- <h1 class="title">Getting Started:</h1> -->
+		<div class="row">
+			<div class="col s0 m1"></div>
+			<div class="col s12 m10 description">
 				<SvelteMarkdown source={marketing.content} />
-			{/if}
+			</div>
+			<div class="col s0 m1"></div>
 		</div>
-		<div class="col s0 m1"></div>
+		<SlideShow uploads={uploads} guide={guide} domainId={domainId} />
+		
+		<br class="hide-on-med-and-down" />
+		<br class="hide-on-med-and-down" />
+		<br />
 	</div>
-	<SlideShow uploads={uploads} guide={guide} domainId={domainId} />
-
-	<br class="hide-on-med-and-down" />
-	<br class="hide-on-med-and-down" />
-	<br />
-</div>
+{/if}
 
 <style>
 

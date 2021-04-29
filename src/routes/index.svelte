@@ -13,10 +13,6 @@
   let domainId
   let state = 'production'
   let uploads
-  let rawApp = {
-    name: '',
-    short: ''
-  }
 
 	let coverBackColor
 	let coverTextColor
@@ -34,6 +30,8 @@
 	let labelSloganLine1
 	let labelSloganLine2
 	let labelPrimaryOffering
+
+	let logo
 
 	onMount(async () => {
 		/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
@@ -56,7 +54,6 @@
         esApp = esEndpoint.payload.data
         appId = esEndpoint.payload.data.id
         uploads = esEndpoint.payload.data.uploads
-        rawApp = JSON.parse(esEndpoint.payload.data.raw)
         domainId = esEndpoint.payload.data.domain // do this so images load
 				
 				coverBackColor = esApp.coverBackColor
@@ -75,6 +72,8 @@
 				labelSloganLine1 = esApp.labelSloganLine1
 				labelSloganLine2 = esApp.labelSloganLine2
 				labelPrimaryOffering = esApp.labelPrimaryOffering
+
+				logo = esApp.logo
       } else {
         alert(esEndpoint.payload.reason)
       }
@@ -86,7 +85,6 @@
         esApp = esOne.payload.data
         appId = esOne.payload.data.id
         uploads = esOne.payload.data.uploads
-        rawApp = JSON.parse(esOne.payload.data.raw)
 
 				coverBackColor = esApp.coverBackColor
 				coverTextColor = esApp.coverTextColor
@@ -104,6 +102,8 @@
 				labelSloganLine1 = esApp.labelSloganLine1
 				labelSloganLine2 = esApp.labelSloganLine2
 				labelPrimaryOffering = esApp.labelPrimaryOffering
+
+				logo = esApp.logo
       } else {
         alert(esOne.payload.reason)
       }
@@ -144,18 +144,31 @@
 					{/if}
 				</div>
 			{:else}
-				<div class="logo">
-					<span style="font-size: 1.5em; line-height: 2em;">{labelName || ''}</span>
+				{#if logo}
+					<img class="logo-image" src={`${uploads}/${logo}`} alt="logo" />
+					<br />
+					<br />
+					<br />
+				{:else}
+					<div class="logo">
+						<span style="font-size: 1.5em; line-height: 2em;">{labelName || 'SETUP'}</span>
+					</div>
+				{/if}
+			{/if}
+			{#if labelName}
+				<h1 class="slogan">{labelSloganLine1}<br />{labelSloganLine2}</h1>
+				<div class="expand">
+					<a href="/#" class={`btn-floating btn-large waves-effect waves-light ${secondaryBtnBackColor} ${secondaryBtnTextColor}`} on:click={() => animateScroll.scrollTo({element: '#jump-here'})}>
+						<i class="material-icons">expand_more</i>
+					</a>
+				</div>
+			{:else}
+				<div class="expand">
+					<a href="https://metaheap.io" class={`btn-floating btn-large waves-effect waves-light ${secondaryBtnBackColor} ${secondaryBtnTextColor}`}>
+						<i class="material-icons">lock</i>
+					</a>
 				</div>
 			{/if}
-			{#if rawApp}
-				<h1 class="slogan">{labelSloganLine1 || ''}<br />{labelSloganLine2 || ''}</h1>
-			{/if}
-			<div class="expand">
-				<a href="/#" class={`btn-floating btn-large waves-effect waves-light ${secondaryBtnBackColor} ${secondaryBtnTextColor}`} on:click={() => animateScroll.scrollTo({element: '#jump-here'})}>
-					<i class="material-icons">expand_more</i>
-				</a>
-			</div>
 		</div>
 	</div>
 </div>
@@ -183,6 +196,7 @@
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+		text-align: center;
 	}
 
 	.logo {
@@ -190,6 +204,11 @@
 		font-size: 4em;
 		font-weight: 800;
 		text-align: center;
+	}
+
+	.logo-image {
+		margin: 0;
+		height: 200px;
 	}
 
 	.slogan {
