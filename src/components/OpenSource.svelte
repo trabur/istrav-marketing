@@ -34,6 +34,8 @@
                 <a href="https://github.com/trabur" target="_blank" class="btn-small waves-effect waves-light red lighten-2">
                   Go to GitHub repo →
                 </a>
+                <br />
+                <br />
               </div>
             </div>
             <div class="col s0 m6">
