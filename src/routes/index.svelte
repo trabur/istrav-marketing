@@ -242,6 +242,7 @@
 		color: #333;
 		cursor: pointer;
 		display: table;
+    line-height: 2em;
 	}
 
 	.aaghc .first-a {
