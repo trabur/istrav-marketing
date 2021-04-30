@@ -118,7 +118,7 @@
 </script>
 
 {#if appId}
-  <Nav selected='' {appId} {primaryBtnBackColor} {primaryBtnTextColor} {secondaryBtnBackColor} {secondaryBtnTextColor} />
+  <Nav selected={`marketing.${slug}`} {appId} {primaryBtnBackColor} {primaryBtnTextColor} {secondaryBtnBackColor} {secondaryBtnTextColor} />
   <Page {appId} {slug} {uploads} {coverBackColor} {coverTextColor} {primaryBtnBackColor} {primaryBtnTextColor} {secondaryBtnBackColor} {secondaryBtnTextColor} {marketing} {labelName} {labelShort} {labelEmail} {labelAbout} {labelSloganLine1} {labelSloganLine2} {labelPrimaryOffering} />
 
 	<Footer appId={appId} esApp={esApp} domainId={domainId} {coverBackColor} {coverTextColor} {labelName} {labelAbout} {labelPrimaryOffering} />
