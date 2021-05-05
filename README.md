@@ -1,6 +1,10 @@
 TYU67.COM
 ========
 
+videos:
+- https://www.youtube.com/watch?v=4KsvgG9AK2s
+
+
 ```bash
 # development
 export PORT=8000; npm run dev
