@@ -2,9 +2,9 @@
   import { onMount } from "svelte";
 
   export let app
-  export let page
-  export let block
-  export let data
+  // export let page
+  // export let block
+  // export let data
 
 	let show = false
 

@@ -5,9 +5,9 @@
   import GoogleAnalytics from './Footer/GoogleAnalytics.svelte'
 
   export let app
-  export let page
-  export let block
-  export let data
+  // export let page
+  // export let block
+  // export let data
   
   let propertyId = app.tawkToPropertyId // || '6051205af7ce18270930caec'
   let chatId = app.tawkToChatId // || '1f0ueco46'
