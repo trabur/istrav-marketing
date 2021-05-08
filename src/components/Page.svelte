@@ -12,13 +12,18 @@
   }
 
 	import SvelteMarkdown from 'svelte-markdown'
+  import queryString from "query-string";
 
 	export let app
   export let slug
 
 	let page
+  let parsed
 
 	onMount(async () => {
+    parsed = queryString.parse(window.location.search)
+    console.log('parsed', parsed)
+
     let esPage = await scripts.app.pages.getOne(app.id, slug)
 		console.log('esPage', esPage)
     if (esPage.payload.success === true) {
@@ -34,7 +39,6 @@
 	function updateViewportComponent(id) {
 		viewportComponent = views[id]
 	}
-
 </script>
 
 
@@ -45,48 +49,50 @@
 </svelte:head>
 
 <!-- wireframes -->
-<svelte:component this={viewportComponent} showWiring={true}>
-  <section slot="logo" class="slot">
-    {#each page.slots.logoSlot as block(block.id)}
-      <Block {app} {page} {block} />
-    {/each}
-  </section>
-  <section slot="slogan" class="slot">
-    {#each page.slots.sloganSlot as block(block.id)}
-      <Block {app} {page} {block} />
-    {/each}
-  </section>
-  <section slot="controls" class="slot">
-    {#each page.slots.controlsSlot as block(block.id)}
-      <Block {app} {page} {block} />
-    {/each}
-  </section>
-  <section slot="navigation" class="slot">
-    {#each page.slots.navigationSlot as block(block.id)}
-      <Block {app} {page} {block} />
-    {/each}
-  </section>
-  <section slot="article" class="slot">
-    {#each page.slots.articleSlot as block(block.id)}
-      <Block {app} {page} {block} />
-    {/each}
-  </section>
-  <section slot="aside" class="slot">
-    {#each page.slots.asideSlot as block(block.id)}
-      <Block {app} {page} {block} />
-    {/each}
-  </section>
-  <section slot="main" class="slot">
-    {#each page.slots.mainSlot as block(block.id)}
-      <Block {app} {page} {block} />
-    {/each}
-  </section>
-  <section slot="footer" class="slot">
-    {#each page.slots.footerSlot as block(block.id)}
-      <Block {app} {page} {block} />
-    {/each}
-  </section>
-</svelte:component>
+{#if parsed}
+  <svelte:component this={viewportComponent} showWiring={(parsed.showWiring == 'true')}>
+    <section slot="logo" class="slot">
+      {#each page.slots.logoSlot as block(block.id)}
+        <Block {app} {page} {block} />
+      {/each}
+    </section>
+    <section slot="slogan" class="slot">
+      {#each page.slots.sloganSlot as block(block.id)}
+        <Block {app} {page} {block} />
+      {/each}
+    </section>
+    <section slot="controls" class="slot">
+      {#each page.slots.controlsSlot as block(block.id)}
+        <Block {app} {page} {block} />
+      {/each}
+    </section>
+    <section slot="navigation" class="slot">
+      {#each page.slots.navigationSlot as block(block.id)}
+        <Block {app} {page} {block} />
+      {/each}
+    </section>
+    <section slot="article" class="slot">
+      {#each page.slots.articleSlot as block(block.id)}
+        <Block {app} {page} {block} />
+      {/each}
+    </section>
+    <section slot="aside" class="slot">
+      {#each page.slots.asideSlot as block(block.id)}
+        <Block {app} {page} {block} />
+      {/each}
+    </section>
+    <section slot="main" class="slot">
+      {#each page.slots.mainSlot as block(block.id)}
+        <Block {app} {page} {block} />
+      {/each}
+    </section>
+    <section slot="footer" class="slot">
+      {#each page.slots.footerSlot as block(block.id)}
+        <Block {app} {page} {block} />
+      {/each}
+    </section>
+  </svelte:component>
+{/if}
 
 
 <div class="row page">

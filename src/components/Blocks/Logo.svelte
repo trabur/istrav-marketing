@@ -1,8 +1,10 @@
 <script>
   import { onMount } from "svelte";
 
-  export let domainId
-  export let rawApp
+  export let app
+  export let page
+  export let block
+  export let data
 
 	let show = false
 
@@ -24,12 +26,12 @@
 <div class="masonry">
 	<div id="particles-js">
 		<div class="middle">
-			{#if domainId === 'istrav.com'}
+			{#if app.domainId === 'istrav.com'}
 				<div class="logo">
 					<span style="font-style: italic; font-size: 3em; margin: 0 -0.1em;">IS</span>
 					<span style="font-style: italic; vertical-align: top; font-size: 1.5em; line-height: 2.3em;">TRAV</span>
 				</div>
-			{:else if domainId === 'aaghc.com'}
+			{:else if app.domainId === 'aaghc.com'}
 				<div class="aaghc" on:mouseenter={showMagic} on:mouseleave={hideMagic}>
 					{#if show}
 						AAGHC
@@ -39,11 +41,11 @@
 				</div>
 			{:else}
 				<div class="logo">
-					<span style="font-size: 1.5em; line-height: 2em;">{rawApp.name || ''}</span>
+					<span style="font-size: 1.5em; line-height: 2em;">{app.labelName || ''}</span>
 				</div>
 			{/if}
-			{#if rawApp}
-				<h1 class="slogan">{rawApp.sloganLine1 || ''}<br />{rawApp.sloganLine2 || ''}</h1>
+			{#if app.labelSloganLine1}
+				<h1 class="slogan">{app.labelSloganLine1 || ''}<br />{app.labelSloganLine2 || ''}</h1>
 			{:else}
 				<h1 class="slogan">Community messaging<br />and bulletin board.</h1>
 			{/if}

@@ -4,24 +4,19 @@
   import TawkToChatWidget from './Footer/TawkToChatWidget.svelte'
   import GoogleAnalytics from './Footer/GoogleAnalytics.svelte'
 
-  export let esApp
-  export let appId
-  export let domainId
-
-  export let coverBackColor
-  export let coverTextColor
-  export let labelName 
-  export let labelAbout
-  export let labelPrimaryOffering
+  export let app
+  export let page
+  export let block
+  export let data
   
-  let propertyId = esApp.tawkToPropertyId // || '6051205af7ce18270930caec'
-  let chatId = esApp.tawkToChatId // || '1f0ueco46'
-  let measurementId = esApp.googleAnalyticsMeasurementId // || 'G-M6CKY68372'
+  let propertyId = app.tawkToPropertyId // || '6051205af7ce18270930caec'
+  let chatId = app.tawkToChatId // || '1f0ueco46'
+  let measurementId = app.googleAnalyticsMeasurementId // || 'G-M6CKY68372'
   let items = []
 
 	onMount(async () => {
     // get the menus
-    let esNavigation = await scripts.app.menus.getOne(appId, 'marketing')
+    let esNavigation = await scripts.app.menus.getOne(app.id, 'marketing')
     if (esNavigation.payload.success === true) {
       items = JSON.parse(esNavigation.payload.data.raw)
     } else {
@@ -38,15 +33,15 @@
   <GoogleAnalytics measurementId={measurementId} />
 {/if}
 
-<footer class="page-footer" style={`background-color: ${coverBackColor}; color: ${coverTextColor}`}>
+<footer class="page-footer" style={`background-color: ${app.coverBackColor}; color: ${app.coverTextColor}`}>
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">{labelName || ''}</h5>
-        <p class="grey-text text-lighten-4">{labelAbout || ''}</p>
+        <h5 class="white-text">{app.labelName || ''}</h5>
+        <p class="grey-text text-lighten-4">{app.labelAbout || ''}</p>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">{labelPrimaryOffering || ''}</h5>
+        <h5 class="white-text">{app.labelPrimaryOffering || ''}</h5>
         {#if items.length > 0}
           <ul>
             {#each items as nav}
@@ -59,7 +54,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-      Copyright @{new Date().getFullYear()} <a href={`https://${domainId}`}>{domainId}</a>. All Rights Reserved. Powered by <a href="https://istrav.com" target="_blank">ISTRAV</a>.
+      Copyright @{new Date().getFullYear()} <a href={`https://${app.domain}`}>{app.domain}</a>. All Rights Reserved. Powered by <a href="https://istrav.com" target="_blank">ISTRAV</a>.
     </div>
   </div>
 </footer>
