@@ -1,8 +1,8 @@
 <script>
   import { onMount } from 'svelte';
 
-  import TawkToChatWidget from './TawkToChatWidget.svelte'
-  import GoogleAnalytics from './GoogleAnalytics.svelte'
+  import TawkToChatWidget from './Footer/TawkToChatWidget.svelte'
+  import GoogleAnalytics from './Footer/GoogleAnalytics.svelte'
 
   export let esApp
   export let appId
@@ -19,7 +19,7 @@
   let measurementId = esApp.googleAnalyticsMeasurementId // || 'G-M6CKY68372'
   let items = []
 
-	onMount(async () => {    
+	onMount(async () => {
     // get the menus
     let esNavigation = await scripts.app.menus.getOne(appId, 'marketing')
     if (esNavigation.payload.success === true) {
