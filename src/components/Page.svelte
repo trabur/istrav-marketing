@@ -11,7 +11,6 @@
     MasterDetail1
   }
 
-	import SvelteMarkdown from 'svelte-markdown'
   import queryString from "query-string";
 
 	export let app
@@ -93,30 +92,3 @@
     </section>
   </svelte:component>
 {/if}
-
-
-<div class="row page">
-  <div class="col s0 m1"></div>
-  <div class="col s12 m10">
-    {#if page && page.content}
-      <br class="hide-on-med-and-down" />
-      <br class="hide-on-med-and-down" />
-      <br />
-      <SvelteMarkdown source={page.content} />
-      <br class="hide-on-med-and-down" />
-      <br class="hide-on-med-and-down" />
-      <br />
-    {/if}
-  </div>
-  <div class="col s0 m1"></div>
-</div>
-
-<style>
-  .page {
-    background-color: #eee;
-    color: #333;
-    min-height: 100vh;
-    margin: 0;
-  }
-
-</style>

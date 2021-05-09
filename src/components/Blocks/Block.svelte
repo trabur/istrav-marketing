@@ -5,17 +5,21 @@
   import GetStarted from './GetStarted.svelte'
   import Logo from './Logo.svelte'
   import MainFooter from './MainFooter.svelte'
+  import Markdown from './Markdown.svelte'
   import Nav from './Nav.svelte'
   import OpenSource from './OpenSource.svelte'
   import SlideShow from './SlideShow.svelte'
+  import Slogan from './Slogan.svelte'
   import Solutions from './Solutions.svelte'
 	const views = {
     GetStarted,
     Logo,
     MainFooter,
+    Markdown,
     Nav,
     OpenSource,
     SlideShow,
+    Slogan,
     Solutions
   }
 
