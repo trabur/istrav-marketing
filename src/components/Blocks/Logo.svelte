@@ -16,12 +16,12 @@
 	}
 </script>
 
-{#if app.domainId === 'istrav.com'}
+{#if app.domain === 'istrav.com'}
 	<div class="logo">
 		<span style="font-style: italic; font-size: 3em; margin: 0 -0.1em;">IS</span>
 		<span style="font-style: italic; vertical-align: top; font-size: 1.5em; line-height: 2.3em;">TRAV</span>
 	</div>
-{:else if app.domainId === 'aaghc.com'}
+{:else if app.domain === 'aaghc.com'}
 	<div class="aaghc" on:mouseenter={showMagic} on:mouseleave={hideMagic}>
 		{#if show}
 			AAGHC
