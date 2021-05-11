@@ -1,19 +1,18 @@
 <script>
   import { onMount } from 'svelte';
 
-	export let selected
-  export let appId
+  export let app
+  export let page
+  // export let block
+  // export let data
 
-	export let primaryBtnBackColor
-	export let primaryBtnTextColor
-	export let secondaryBtnBackColor
-	export let secondaryBtnTextColor
+	export let selected
 
   let items = []
 
 	onMount(async () => {    
     // get the menus
-    let esNavigation = await scripts.app.menus.getOne(appId, 'main')
+    let esNavigation = await scripts.app.menus.getOne(app.id, 'main')
     if (esNavigation.payload.success === true) {
       items = JSON.parse(esNavigation.payload.data.raw)
     } else {
@@ -27,11 +26,11 @@
 	<div class="nav">
 		{#each items as nav}
 			{#if nav.id === selected}
-				<a href={nav.url} class={`btn-large waves-effect waves-light ${primaryBtnBackColor} ${primaryBtnTextColor}`}>
+				<a href={nav.url} class={`btn-large waves-effect waves-light ${app.primaryBtnBackColor} ${app.primaryBtnTextColor}`}>
 					{nav.name}
 				</a>
 			{:else}
-				<a href={nav.url} class={`btn-large waves-effect waves-light ${secondaryBtnBackColor} ${secondaryBtnTextColor}`}>
+				<a href={nav.url} class={`btn-large waves-effect waves-light ${app.secondaryBtnBackColor} ${app.secondaryBtnTextColor}`}>
 					{nav.name}
 				</a>
 			{/if}

@@ -48,8 +48,8 @@
 </svelte:head>
 
 <!-- wireframes -->
-{#if parsed}
-  <svelte:component this={viewportComponent} showWiring={(parsed.showWiring == 'true')}>
+{#if page && parsed}
+  <svelte:component this={viewportComponent} {app} {page} showWiring={(parsed.showWiring == 'true')}>
     <section slot="logo" class="slot">
       {#each page.slots.logoSlot as block(block.id)}
         <Block {app} {page} {block} />
