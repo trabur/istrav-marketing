@@ -2,23 +2,21 @@
 	import { onMount } from "svelte";
 
   // load all blocks here
-  import GetStarted from './GetStarted.svelte'
   import Logo from './Logo.svelte'
   import MainFooter from './MainFooter.svelte'
   import Markdown from './Markdown.svelte'
   import Navigation from './Navigation.svelte'
   import OpenSource from './OpenSource.svelte'
-  import SlideShow from './SlideShow.svelte'
+  import FeaturedGuide from './FeaturedGuide.svelte'
   import Slogan from './Slogan.svelte'
   import Solutions from './Solutions.svelte'
 	const views = {
-    GetStarted,
     Logo,
     MainFooter,
     Markdown,
     Navigation,
     OpenSource,
-    SlideShow,
+    FeaturedGuide,
     Slogan,
     Solutions
   }
