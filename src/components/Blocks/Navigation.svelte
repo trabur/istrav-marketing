@@ -6,8 +6,6 @@
   // export let block
   // export let data
 
-	export let selected
-
   let items = []
 
 	onMount(async () => {    
@@ -25,7 +23,7 @@
 {#if items.length > 0}
 	<div class="nav">
 		{#each items as nav}
-			{#if nav.id === selected}
+			{#if nav.id === `pages.${page.slug}`}
 				<a href={nav.url} class={`btn-large waves-effect waves-light ${app.primaryBtnBackColor} ${app.primaryBtnTextColor}`}>
 					{nav.name}
 				</a>
