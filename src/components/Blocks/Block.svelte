@@ -7,6 +7,7 @@
   import Markdown from './Markdown.svelte'
   import Navigation from './Navigation.svelte'
   import OpenSource from './OpenSource.svelte'
+  import SideNavigation from './SideNavigation.svelte'
   import FeaturedGuide from './FeaturedGuide.svelte'
   import Slogan from './Slogan.svelte'
   import Solutions from './Solutions.svelte'
@@ -16,6 +17,7 @@
     Markdown,
     Navigation,
     OpenSource,
+    SideNavigation,
     FeaturedGuide,
     Slogan,
     Solutions
