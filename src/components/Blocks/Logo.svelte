@@ -30,9 +30,15 @@
 		{/if}
 	</div>
 {:else}
-	<div class="logo">
-		<span style="font-size: 1.5em; line-height: 2em;">{app.labelName || ''}</span>
-	</div>
+	{#if app.logo}
+		<div class="logo">
+			<img src={`${app.uploads}/${app.logo}`} style="height: 3em; margin: 0.5em;" alt={app.name} />
+		</div>
+	{:else}
+		<div class="logo">
+			<span style="font-size: 1.5em; line-height: 2em;">{app.labelName || ''}</span>
+		</div>
+	{/if}
 {/if}
 
 <style>

@@ -13,6 +13,7 @@
   let app
   let domainId
   let state = 'production'
+  let scripts = window['scripts']
 
   $: { reMount($page.params.slug) }
   // $: { reMount($page.params.state) }
