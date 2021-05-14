@@ -16,7 +16,7 @@
   export let chatId = 'default'
   onMount(() => {
     // Widget code from dashboard
-    const Tawk_API = Tawk_API || {},
+    const Tawk_API = window['Tawk_API'] || {},
       Tawk_LoadStart = new Date()
     ;(function() {
       var s1 = document.createElement('script'),

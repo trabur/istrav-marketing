@@ -1,5 +1,5 @@
 <script context="module">
-  export async function preload(page, session) {
+  export async function load({ session }) {
     const { API_URI, IO_URI, HEADLESS_URI } = session;
 
     return { 
@@ -30,24 +30,24 @@
 
   onMount(() => {
     // fetch library
-    window.axios = axios
+    window['axios'] = axios
 
     // appId domain state
     let backend
     let headless
     let io
     if (window.location.host === 'localhost:8000') {
-      window.appDomain = 'istrav.com'
+      window['appDomain'] = 'istrav.com'
       headless = 'http://localhost:9999'
       backend = 'http://localhost:1337'
       io = 'http://localhost:3333'
-      console.log('localhost settings:', appDomain, backend, headless, io)
+      console.log('localhost settings:', window['appDomain'], backend, headless, io)
     } else {
-      window.appDomain = window.location.host
+      window['appDomain'] = window.location.host
       headless = headlessUri || 'https://farmerless.com'
       backend = apiUri || 'https://api.hacktracks.org'
       io = ioUri || 'https://io.hacktracks.org'
-      console.log('production settings:', appDomain, backend, headless, io)
+      console.log('production settings:', window['appDomain'], backend, headless, io)
     }
 
     // headless.istrav.com scripts
@@ -57,6 +57,7 @@
       // console.log(window.scripts)
       // console.log(window.istrav)
 
+      let istrav = window['istrav']
       istrav.tenant.members.init({ host: backend })
       istrav.tenant.apps.init({ host: backend })
       istrav.app.menus.init({ host: backend })

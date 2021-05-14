@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/contact", "destination": "/" },
-    { "source": "/faq", "destination": "/" },
-    { "source": "/pricing", "destination": "/" },
-    { "source": "/pages/:id", "destination": "/" }
-  ]
-}

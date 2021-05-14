@@ -7,7 +7,7 @@ videos:
 
 ```bash
 # development
-export PORT=8000; npm run dev
+$ npm run dev
 ```
 
 ```bash
