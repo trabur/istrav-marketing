@@ -5,6 +5,7 @@
   export let page
   // export let block
   // export let data
+  let scripts = window['scripts']
 
   let items = []
 

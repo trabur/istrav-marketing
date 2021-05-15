@@ -15,6 +15,7 @@
 
 	export let app
   export let slug
+  let scripts = window['scripts']
 
 	let page
   let parsed

@@ -11,7 +11,7 @@
 		let domain
 
 		setTimeout(() => {
-			let splide = new Splide(`.splide`, {
+			let splide = new window['Splide'](`.splide`, {
 				type: 'loop',
 				fixedWidth: '20em',
 				autoplay: false
@@ -21,7 +21,7 @@
 				console.log(rate); // 0-1
 			})
 	
-			splide.mount(window.splide.Extensions)
+			splide.mount(window['splide'].Extensions)
 		}, 1000)
 	})
 

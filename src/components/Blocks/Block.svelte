@@ -26,6 +26,7 @@
 	export let app
   export let page
   export let block
+  let scripts = window['scripts']
 
 	let data
 
