@@ -2,7 +2,8 @@
 <script>
   import { onMount } from 'svelte';
 
-  import Page from '../components/Page.svelte'
+  import { istrav, scripts } from '../../farmerless/api'
+  import Page from '../../farmerless/components/Page.svelte'
 
   import { getStores, navigating, page, session } from '$app/stores';
 
@@ -13,7 +14,6 @@
   let app
   let domainId
   let state = 'production'
-  let scripts = window['scripts']
 
   $: { reMount($page.params.slug) }
   // $: { reMount($page.params.state) }
