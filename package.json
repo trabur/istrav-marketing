@@ -9,7 +9,8 @@
     "build": "svelte-kit build",
     "preview": "svelte-kit preview --port=8000",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "format": "prettier --write --plugin-search-dir=. .",
+    "postinstall": "cd ./farmerless && npm install"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "^1.0.0-next.20",
