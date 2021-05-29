@@ -6,10 +6,7 @@ RUN pwd
 
 COPY . .
 RUN git submodule update --init --recursive
-
-# check farmerless installed
-RUN ls -la
-RUN cd farmerless && ls -la
+RUN cd farmerless && npm install
 
 RUN npm install
 RUN npm run build
