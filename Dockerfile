@@ -5,10 +5,16 @@ WORKDIR /usr/src/app
 
 # Bundle source code
 COPY . .
+RUN pwd
+RUN ls -la
 RUN git submodule update --init --recursive
-COPY farmerless ./farmerless
+
+# Bundle farmerless
+COPY . .
+RUN ls -la
 
 RUN npm install
+RUN ls -la
 RUN npm run build
 
 # Bundle app source
