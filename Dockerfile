@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 # Bundle source code
 COPY . .
 RUN git submodule update --init --recursive
+COPY farmerless ./farmerless
 
 RUN npm install
 RUN npm run build
