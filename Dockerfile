@@ -2,10 +2,12 @@ FROM node:14
 
 # Create app directory
 WORKDIR /usr/src/app
+RUN pwd
+
 
 # Bundle source code
+RUN ls -la
 COPY . .
-RUN pwd
 RUN ls -la
 RUN git submodule update --init --recursive
 
