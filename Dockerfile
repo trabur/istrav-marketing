@@ -14,7 +14,7 @@ COPY svelte.config.js ./
 
 COPY .git ./
 COPY .gitmodules ./
-RUN git submodule update --init --recursive && git submodule foreach --recursive git fetch
+RUN git submodule update --init --recursive
 
 RUN npm install
 RUN npm run build
